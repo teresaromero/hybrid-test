@@ -1,0 +1,14 @@
+build:
+  app:
+    context: app
+
+deploy:
+  - kubectl apply -f k8s.yaml
+
+dev:
+  app:
+    mode: hybrid     
+    command: ["yarn dev"]
+    reverse:
+      - 80:80
+    workdir: ./app

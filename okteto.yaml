@@ -14,3 +14,16 @@ dev:
     workdir: ./app
     environment:
       VARIABLE1: value1
+  
+  # app:
+  #   image: node:18
+  #   command: [bash]
+  #   sync:
+  #     - app:/usr/src/app
+  #   workdir: /usr/src/app
+  #   forward:
+  #     - 8080:8080
+  #   environment:
+  #     VARIABLE1: value1
+  #   envFiles:
+  #     - app/.env

@@ -8,7 +8,9 @@ deploy:
 dev:
   app:
     mode: hybrid     
-    command: ["yarn dev"]
+    command: ["sh", "-c", "echo VARIABLE1=$VARIABLE1 && yarn dev"]
     reverse:
       - 8080:8080
     workdir: ./app
+    environment:
+      VARIABLE1: value1
